@@ -1,0 +1,13 @@
+<div class="container mx-auto">
+  <h2>Task List</h2>
+  <input type="text" [(ngModel)]="newTask" placeholder="Add a new task">
+  <button (click)="addTask()">Add Task</button>
+  <div class="container tasks-container">
+    <ul>
+      <li *ngFor="let task of tasks">
+        {{ task }}
+        <button (click)="deleteTask(task)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
